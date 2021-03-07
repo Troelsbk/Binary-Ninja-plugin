@@ -1,20 +1,20 @@
-### A custom MIPS architecture plugin for Binary Ninja.
+# A custom MIPS architecture plugin for Binary Ninja.
 This is a naive MIPS architecture plugin without [ILL] or [capstone], so don't expect any symbol resolution.
 The basic logic should be working fine, as demonstrated below.
 
 The plugin is for convience seperation into three files.
-### mips_instructions.py
+## mips_instructions.py
 Contains the MIPS Instruction Reference.
-### mips_plugin_external_functions.py
+## mips_plugin_external_functions.py
 Generates instructions token for "get_instruction_text" method in the Architecture class.
-### Custom_mipsPlugin.py
+## Custom_mipsPlugin.py
 Holds the Binary Ninja Architecture class. 
-### mips.c
+## mips.c
 Sample C file for testing compiled with
 ```
 mipsel-linux-gnu-gcc mips.c -o mips_out
 ```
-### mips_out
+## mips_out
 The compiled mips.c file.
 
 ```console
@@ -40,7 +40,7 @@ Linux desktop 5.4.0-66-generic #74~18.04.2-Ubuntu SMP Fri Feb 5 11:17:31 UTC 202
 You may need to install the [gcc-mipsel-linux-gnu] package.
 Tested with binary ninja 1.3.2015 personal.
 
-## Samples
+# Samples
 ![custom_main](https://i.ibb.co/zbWrt0H/custom-plugin-main.jpg "custom")
 ![buildin](https://i.ibb.co/gDscMgp/buildin-main.jpg "buildin")
 
